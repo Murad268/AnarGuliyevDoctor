@@ -53,7 +53,7 @@
                     <div class="image_block_one">
                         <div class="image-box mr_30 pr_130 pb_100">
                             <div class="shape" style="background-image: url(assets/images/shape/shape-1.png"></div>
-                            <figure class="image"><img src="assets/images/resource/about-1.jpg" alt=""></figure>
+                            <figure class="image"><img src="{{$who->getImage($who->image)}}" alt=""></figure>
                             <div class="text p_absolute r_0 b_0">
                                 <h2>{{$who->image_subbox_text_top}}</h2>
                                 <h4>{{$who->image_subbox_text_bottom}}</h4>

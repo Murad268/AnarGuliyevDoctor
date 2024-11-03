@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@include('partials._seo', ['code' => 'blogs'])
 @section('content')
     <section class="page-title">
         <div class="bg-layer" style="background-image: url({{$banners->getImage($banners->contact_banner)}});"></div>

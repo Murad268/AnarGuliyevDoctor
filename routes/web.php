@@ -20,10 +20,9 @@ Route::get('language/{code}', [\App\Http\Controllers\SwitchLanguageController::c
 Route::get('search', [\App\Http\Controllers\SearchController::class, 'search'])->name('search');
 
 
-$mainLang =  'az';
 $repository = app(\App\Repositories\MenuRepository::class);
-Cache::put('app_locale', $mainLang);
 $lang = Cache::get('app_locale', config('app.locale'));
+
 Route::prefix('')
     ->name('client.')
     ->middleware('web') // Add the 'web' middleware here

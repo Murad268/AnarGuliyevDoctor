@@ -5,6 +5,7 @@ use App\Models\Banner;
 use App\Models\Email;
 use App\Models\Info;
 use App\Models\Infos;
+use App\Models\Lang;
 use App\Models\Menu;
 use App\Models\Phone;
 use App\Models\Service;
@@ -33,12 +34,14 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrap();
         View::composer('*', function ($view) {
+            $menuRepository = app(MenuRepository::class);
             $infos = Infos::first();
             $email = Email::first()->email;
             $phone = Phone::first()->phone;
             $menus = Menu::all();
             $banners = Banner::first();
-            $view->with(compact('infos', 'email', 'phone', 'menus', 'banners'));
+            $langs = Lang::orderBy('order')->where('status', 1)->get();
+            $view->with(compact('infos', 'email', 'phone', 'menus', 'banners', 'menuRepository', 'langs'));
         });
     }
 }

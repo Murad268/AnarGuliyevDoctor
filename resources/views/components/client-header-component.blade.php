@@ -1,37 +1,3 @@
-<div class="loader-wrap">
-    <div class="preloader">
-        <div class="preloader-close">x</div>
-        <div id="handle-preloader" class="handle-preloader">
-            <div class="animation-preloader">
-                <div class="spinner"></div>
-                <div class="txt-loading">
-                            <span data-text-preloader="o" class="letters-loading">
-                                o
-                            </span>
-                    <span data-text-preloader="p" class="letters-loading">
-                                p
-                            </span>
-                    <span data-text-preloader="t" class="letters-loading">
-                                t
-                            </span>
-                    <span data-text-preloader="c" class="letters-loading">
-                                c
-                            </span>
-                    <span data-text-preloader="a" class="letters-loading">
-                                a
-                            </span>
-                    <span data-text-preloader="r" class="letters-loading">
-                                r
-                            </span>
-                    <span data-text-preloader="e" class="letters-loading">
-                                e
-                            </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- preloader end -->
 
 
 
@@ -79,6 +45,9 @@
                         @endif
                     </ul>
 
+
+
+
                 </div>
             </div>
         </div>
@@ -112,6 +81,17 @@
                     </nav>
                 </div>
                 <div class="nav-right">
+
+                    <div style="display: flex; gap: 10px; margin-right: 30px">
+                        @foreach($langs as $lang)
+                            <div style="display: flex; align-items: center;">
+                                <a href="{{ url('language') }}/{{ $lang->code }}" style="text-decoration: none; color: inherit;">
+                                    <span class="fi fi-{{ $lang->site_code }}"></span>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+
 
                     <div class="btn-box">
                         <a href="index-2.html" class="theme-btn btn-one">{{__("site.Appointment")}}</a>

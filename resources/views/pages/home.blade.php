@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@include('partials._seo', ['code' => 'home'])
 @section('content')
 
     <!-- banner-section -->
@@ -186,14 +186,14 @@
                 <span class="sub-title">{{__('site.Emergency Help')}}</span>
                 <h2>{{__("Need a Doctor for Check-up? Call for an Emergency Service!")}}</h2>
             </div>
-            <div class="support-box p_relative centred">
+            <div  class="support-box p_relative centred">
                 <div class="icon-box"><img src="assets/images/icons/icon-2.png" alt=""></div>
-                <h3>{{__("site.Call")}}: <a href="tel:{{ preg_replace('/[^0-9]/', '', $phone) }}">{{$phone}}</a></h3>
+                <h3 style="color: white" >{{__("site.Call")}}: <a style="color: white" href="tel:{{ preg_replace('/[^0-9]/', '', $phone) }}">{{$phone}}</a></h3>
             </div>
             <div class="row clearfix">
                 <div class="col-lg-4 col-md-12 col-sm-12 form-column">
                     <div class="form-inner">
-                        <h3>{!! __('site.contact_title') !!}</h3>
+                        <h3 style="color: white">{!! __('site.contact_title') !!}</h3>
                         <form id="appointmentForm" class="default-form">
                             @csrf
                             <div class="form-group">

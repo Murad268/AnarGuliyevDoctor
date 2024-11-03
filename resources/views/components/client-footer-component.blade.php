@@ -20,23 +20,23 @@
                         <div class="widget-content">
                             <ul class="social-links clearfix">
                                 @if(!empty($infos->facebook))
-                                    <li><a href="{{ $infos->facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li ><a style="display: flex; align-items: center; justify-content: center" href="{{ $infos->facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                                 @endif
 
                                 @if(!empty($infos->twitter))
-                                    <li><a href="{{ $infos->twitter }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a style="display: flex; align-items: center; justify-content: center" href="{{ $infos->twitter }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
                                 @endif
 
                                 @if(!empty($infos->instagram))
-                                    <li><a href="{{ $infos->instagram }}" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a style="display: flex; align-items: center; justify-content: center" href="{{ $infos->instagram }}" target="_blank"><i class="fab fa-instagram"></i></a></li>
                                 @endif
 
                                 @if(!empty($infos->linkedin))
-                                    <li><a href="{{ $infos->linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a style="display: flex; align-items: center; justify-content: center" href="{{ $infos->linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                                 @endif
 
                                 @if(!empty($infos->youtube))
-                                    <li><a href="{{ $infos->youtube }}" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a style="display: flex; align-items: center; justify-content: center" href="{{ $infos->youtube }}" target="_blank"><i class="fab fa-youtube"></i></a></li>
                                 @endif
                             </ul>
 

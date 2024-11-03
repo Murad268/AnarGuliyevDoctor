@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@include('partials._seo', ['blog' => $blog])
 @section('content')
     <!-- Page Title -->
     <section class="page-title">

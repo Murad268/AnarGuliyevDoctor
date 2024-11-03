@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@include('partials._seo', ['code' => 'portfolio'])
 @section('content')
 
     <!-- Page Title -->

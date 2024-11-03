@@ -223,9 +223,12 @@
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12 video-column">
                     <div class="video-inner" style="background-image: url({{__($infos->getImage($infos->home_page_video_thumbnail))}});">
-                        <div class="video-btn">
-                            <a href="{{$infos->home_page_video}}" class="lightbox-image" data-caption=""><i class="fas fa-play"></i></a>
-                        </div>
+                    <div class="video-btn" style="display: flex; justify-content: center; align-items: center;">
+    <a href="{{$infos->home_page_video}}" class="lightbox-image" data-caption="" style="position: relative; display: inline-block; width: 100px; height: 100px;">
+        <i class="fas fa-play" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></i>
+    </a>
+</div>
+
                     </div>
                 </div>
             </div>
